@@ -1,0 +1,139 @@
+
+:root {
+  --primary: #4f46e5;
+  --secondary: #6366f1;
+  --bg-gradient-light: linear-gradient(135deg, #f0f4ff 0%, #ffffff 100%);
+  --bg-gradient-dark: linear-gradient(135deg, #1e1e2f 0%, #121212 100%);
+  --card-light: #ffffff;
+  --card-dark: #2a2a3d;
+  --text-light: #2d2d2d;
+  --text-dark: #e0e0e0;
+  --shadow-light: rgba(0, 0, 0, 0.1);
+  --shadow-dark: rgba(0, 0, 0, 0.4);
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: var(--bg-gradient-light);
+  color: var(--text-light);
+  transition: all 0.4s ease;
+}
+
+header {
+  background: var(--primary);
+  color: white;
+  padding: 1.5rem 2rem;
+  text-align: center;
+  box-shadow: 0 4px 8px var(--shadow-light);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+h1 {
+  margin: 0;
+  font-weight: 600;
+}
+
+main {
+  padding: 2rem;
+  max-width: 960px;
+  margin: auto;
+}
+
+form, section {
+  background: var(--card-light);
+  padding: 1.5rem;
+  border-radius: 16px;
+  margin-bottom: 2rem;
+  box-shadow: 0 6px 12px var(--shadow-light);
+}
+
+input, textarea, select, button {
+  display: block;
+  margin: 0.75rem 0 1rem 0;
+  padding: 0.75rem 1rem;
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+input:focus, textarea:focus, select:focus {
+  border-color: var(--primary);
+  outline: none;
+  box-shadow: 0 0 6px var(--primary);
+}
+
+button {
+  background: var(--secondary);
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background: #4338ca;
+  transform: translateY(-2px);
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  background: var(--card-light);
+  margin-bottom: 1.2rem;
+  padding: 1.2rem;
+  border-radius: 14px;
+  box-shadow: 0 6px 12px var(--shadow-light);
+  transition: background 0.3s ease;
+}
+
+.completed {
+  text-decoration: line-through;
+  opacity: 0.6;
+}
+
+#notification {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: #ef4444;
+  color: white;
+  padding: 1rem 1.25rem;
+  border-radius: 10px;
+  display: none;
+  z-index: 1000;
+  box-shadow: 0 6px 12px var(--shadow-light);
+}
+
+body.dark-mode {
+  background: var(--bg-gradient-dark);
+  color: var(--text-dark);
+}
+
+body.dark-mode header {
+  background-color: #1f1f2f;
+}
+
+body.dark-mode form,
+body.dark-mode section,
+body.dark-mode li {
+  background-color: var(--card-dark);
+  color: var(--text-dark);
+  box-shadow: 0 6px 12px var(--shadow-dark);
+}
+
+body.dark-mode button {
+  background-color: #5b5bff;
+}
+
+body.dark-mode button:hover {
+  background-color: #7878ff;
+}

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Task Manager</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>Task Manager</h1>
+    <button id="theme-toggle">Toggle Dark/Light</button>
+  </header>
+
+  <main>
+    <form id="task-form">
+      <input type="text" id="title" placeholder="Task Title" required />
+      <textarea id="description" placeholder="Description"></textarea>
+      <select id="priority">
+        <option value="low">Low</option>
+        <option value="medium">Medium</option>
+        <option value="high">High</option>
+      </select>
+      <select id="category">
+        <option value="Personal">Personal</option>
+        <option value="Work">Work</option>
+        <option value="Urgent">Urgent</option>
+      </select>
+      <button type="submit">Add Task</button>
+    </form>
+
+    <section>
+      <input type="text" id="search" placeholder="Search tasks..." />
+      <select id="filter-category">
+        <option value="All">All Categories</option>
+        <option value="Personal">Personal</option>
+        <option value="Work">Work</option>
+        <option value="Urgent">Urgent</option>
+      </select>
+    </section>
+
+    <ul id="task-list"></ul>
+  
+    <section id="task-list"></section>
+  </main>
+
+
+  <div id="notification"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
